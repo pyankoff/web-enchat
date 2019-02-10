@@ -1,0 +1,25 @@
+{
+  "name": "react-native",
+  "version": "1.0.0",
+  "description": "React Native for Web starter template",
+  "homepage": "http://pyankoff.github.io/web-campfire",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "16.5.1",
+    "react-art": "16.5.1",
+    "react-dom": "16.5.1",
+    "react-native-web": "^0.10.x",
+    "react-scripts": "1.1.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
