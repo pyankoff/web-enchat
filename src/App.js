@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Button, Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import ReactGA, { OutboundLink } from 'react-ga'
 
 import Constants from './Constants'
 import logo from './static/icon_transparent_512.png'
@@ -8,6 +9,9 @@ import itunes from './static/app_store.svg'
 import gplay from './static/google_play.png'
 import Privacy from './components/Privacy'
 import Terms from './components/Terms'
+
+ReactGA.initialize('UA-57252107-17');
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 const Link = props => (
   <Text
@@ -38,18 +42,24 @@ const Landing = () => (
           Discover interesting topics and join the conversation
         </Text>
         <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10,}}>
-          <Image
-            accessibilityRole="link"
-            href='https://itunes.apple.com/app/id1451465193'
-            source={itunes}
-            style={{width: 120, height: 40}}
-          />
-          <Image
-            accessibilityRole="link"
-            href={'https://play.google.com/store/apps/details?id=app.campfire'}
-            source={gplay}
-            style={{width: 156, height: 50}}
-          />
+          <OutboundLink
+            eventLabel="AppStore"
+            to='https://itunes.apple.com/app/id1451465193'
+            target="_blank">
+            <Image
+              source={itunes}
+              style={{width: 120, height: 40}}
+            />
+          </OutboundLink>
+          <OutboundLink
+            eventLabel="GooglePlay"
+            to='https://play.google.com/store/apps/details?id=app.campfire'
+            target="_blank">
+            <Image
+              source={gplay}
+              style={{width: 156, height: 50}}
+            />
+          </OutboundLink>
         </View>
       </View>
     </View>
