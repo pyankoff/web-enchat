@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "yarn build && echo 'campfire.host' > ./build/CNAME && gh-pages -d build",
+    "deploy": "yarn build && echo 'enchat.app' > ./build/CNAME && gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

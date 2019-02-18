@@ -1,7 +1,7 @@
 export default {
   card: '#fff',
 
-  back: '#15202a',
+  back: '#fff',
   tab: '#1f303f',
   red: '#ff5e5e',
   green: '#1dd1a1',
@@ -18,7 +18,7 @@ export default {
   lightergray: '#f4f4f4',
   white: '#fff',
 
-  text: '#f4f4f4',
+  text: '#000',
 
   tint: '#f4f4f4',
   dark: '#273a7f',

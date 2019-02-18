@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ReactGA, { OutboundLink } from 'react-ga'
 
 import Constants from './Constants'
-import logo from './static/icon_transparent_512.png'
+import logo from './static/icon.png'
 import itunes from './static/app_store.svg'
 import gplay from './static/google_play.png'
 import Privacy from './components/Privacy'
 import Terms from './components/Terms'
 
-ReactGA.initialize('UA-57252107-17');
+ReactGA.initialize('UA-57252107-15');
 ReactGA.pageview(window.location.pathname + window.location.search)
 
 const Link = props => (
@@ -36,15 +36,15 @@ const Landing = () => (
         <Text
           accessibilityRole="heading"
           style={{fontSize: 72, fontWeight: '200', }}>
-          Campfire
+          Enchat
         </Text>
         <Text style={{fontSize: 20, lineHeight: 32, fontWeight: '400', marginVertical: 15, marginLeft: 2, marginRight: 20,}}>
-          Discover interesting topics and join the conversation
+          Chat and learn English
         </Text>
         <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10,}}>
           <OutboundLink
             eventLabel="AppStore"
-            to='https://itunes.apple.com/app/id1451465193'
+            to='https://itunes.apple.com/app/id1403194839&referrer=www'
             target="_blank">
             <Image
               source={itunes}
@@ -53,7 +53,7 @@ const Landing = () => (
           </OutboundLink>
           <OutboundLink
             eventLabel="GooglePlay"
-            to='https://play.google.com/store/apps/details?id=app.campfire'
+            to='https://play.google.com/store/apps/details?id=app.enchat&referrer=www'
             target="_blank">
             <Image
               source={gplay}
